@@ -118,6 +118,7 @@ git config --global user.email "yesiddgarzon@gmail.com"
 git config --global color.ui true
 git config --global core.editor nvim
 git config --global init.defaultBranch main
+ssh-keygen -t rsa -C "yesiddgarzon@gmail.com"
 gh auth login
 ssh -T git@github.com
 git clone --bare git@github.com:yesiddgarzon/dotfiles.git $HOME/.dotfiles
