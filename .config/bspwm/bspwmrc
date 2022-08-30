@@ -1,0 +1,76 @@
+#! /bin/sh
+
+### environment
+export PATH="${PATH}:${HOME}/.local/bin"
+xrdb -merge ~/.Xresources
+
+### autostart
+pgrep -x sxhkd > /dev/null || sxhkd &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+numlockx &
+picom -b &
+dunst &
+xfce4-power-manager &
+$HOME/.local/bin/eww -c $HOME/.config/eww/bar --restart open bar &
+feh --no-fehbg --bg-fill --randomize $HOME/Wallpapers/
+xsetroot -cursor_name left_ptr
+
+### general config
+bspc monitor -d 1 2 3 4 5 6
+
+bspc config border_width        0
+bspc config window_gap          10
+
+bspc config automatic_scheme     spiral
+bspc config split_ratio          0.50
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config single_monocle	 false
+
+bspc config pointer_modifier	mod4
+bspc config pointer_action1	move
+bspc config pointer_action2	resize_side
+bspc config pointer_action3	resize_corner
+
+bspc config external_rules_command "$HOME/.local/bin/spotify"
+
+### window rules
+# 1 > code 
+declare -a code=(Subl code-oss nvim)
+for i in "${code[@]}"; do
+  bspc rule -a "$i" desktop='^1' follow=on focus=on
+done
+
+# 2 > web
+declare -a web=(Google-chrome firefox)
+for i in "${web[@]}"; do
+  bspc rule -a "$i" desktop='^2' follow=on focus=on
+done
+
+# 3 > vms 
+declare -a virtual=(Virt-manager "VirtualBox Manager")
+for i in "${virtual[@]}"; do
+  bspc rule -a "$i" desktop='^3' follow=on focus=on
+done
+
+# 4 > media
+declare -a media=(Spotify vlc)
+for i in "${media[@]}"; do
+  bspc rule -a "$i" desktop='^4' follow=on focus=on
+done
+
+# 5 > setup
+declare -a setup=(Lxappearance Pavucontrol Xfce4-power-manager-settings)
+for i in "${setup[@]}"; do
+  bspc rule -a "$i" desktop='^5' follow=on focus=on
+done
+
+# floating apps
+declare -a floats=(Org.gnome.Nautilus feh Gedit kitty:ranger Pavucontrol
+Virt-manager "VirtualBox Manager" "VirtualBox Machine" gnome-calculator
+Gnome-disks Arandr Gnome-system-monitor Lxappearance Xfce4-power-manager-settings 
+kitty:nmtui)
+for i in "${floats[@]}"; do
+  bspc rule -a "$i" state=floating follow=on focus=on center=true
+done
+
