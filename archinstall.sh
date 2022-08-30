@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-local packages=(
+packages=(
 arc-gtk-theme
 bat
 betterlockscreen
@@ -71,7 +71,7 @@ makepkg -si
 cd
 
 # Instalación de paquetes
-yay -Sy --needed --noconfirm $packages
+yay -Sy --needed --noconfirm ${packages[@]}
 
 # QEMU+KVM
 sudo systemctl enable libvirtd.service 
@@ -90,7 +90,6 @@ install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/bspwmrc
 install -Dm644 /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/sxhkdrc
 
 # NVM + NvChad
-clear
 read -n 1 -r -s -p $'Ahora instala NvChad y NVM\nPresiona enter al terminar...\n'
 
 # Fix Cursores
@@ -105,10 +104,10 @@ sudo systemctl enable ufw
 sudo systemctl enable sshd
 
 # Instalar temas e iconos
-cd Downloads
+cd ~/Downloads
 git clone https://github.com/vinceliuice/Colloid-icon-theme.git
-cd Colloid-gtk-theme && ./install.sh && cd ..
 cd
+~/Downloads/Colloid-icon-theme/./install.sh
 
 # Cargar dotfiles
 clear
