@@ -42,7 +42,7 @@ alias mirrorup='sudo reflector --latest 10 --protocol http,https --sort rate --s
 
 # -- dotfiles
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias dota='dots add -u'
+alias dota='dots add'
 alias dotc='dots commit -m'
 alias dotp='dots push'
 alias dotss='dots status'
