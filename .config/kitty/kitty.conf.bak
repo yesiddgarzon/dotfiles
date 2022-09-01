@@ -1,10 +1,12 @@
+confirm_os_window_close 0
+
 # Theme & Style
-background_opacity 0.98
+background_opacity 0.97
 tab_bar_style powerline
 window_padding_width 10
 remember_window_size no
-initial_window_width 90c
-initial_window_height 40c
+initial_window_width 85c
+initial_window_height 50c
 
 # Font
 font_family RobotoMono Nerd Font Mono
@@ -53,9 +55,7 @@ map ctrl+shift+t new_tab_with_cwd
 
 shell zsh
 
-
-
 # BEGIN_KITTY_THEME
-# Nord
+# Tokyo Night
 include current-theme.conf
 # END_KITTY_THEME

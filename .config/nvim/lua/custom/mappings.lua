@@ -1,17 +1,20 @@
 local M = {}
 
 M.disabled = {
-  "<C-k>",
 }
 
 M.custom = {
   n = {
-    ["<leader>w"] = { "<cmd> wq <CR>", "Save & Exit" },
     ["<leader>q"] = { "<cmd> q <CR>", "Close" },
-    ["<C-j>"] = { "5j", "Move 5 lines at once" },
-    ["<C-k>"] = { "5k", "Move 5 lines at once" },
-    ["<A-j>"] = { "<cmd> m .+1 <CR>", "Move line down" },
-    ["<A-k>"] = { "<cmd> m .-2 <CR>", "Move line up" },
+    ["<leader>w"] = { "<cmd> wq <CR>", "Save & Exit" },
+    ["<C-down>"] = { "5j", "Move 5 lines at once" },
+    ["<C-up>"] = { "5k", "Move 5 lines at once" },
+    ["<A-j>"] = { "<cmd> m .+1 <CR>==", "Move line down" },
+    ["<A-k>"] = { "<cmd> m .-2 <CR>==", "Move line up" },
+    ["<A-down>"] = { "<cmd> res -1 <CR>", "Resize down" },
+    ["<A-up>"] = { "<cmd> res +1 <CR>", "Resize up" },
+    ["<A-left>"] = { "<cmd> vertical resize-1 <CR>", "Resize left" },
+    ["<A-right>"] = { "<cmd> vertical resize+1 <CR>", "Resize right" },
   },
   i = {
     ["<A-j>"] = { "<cmd> m .+1 <CR>", "Move line down" },
