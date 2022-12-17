@@ -11,9 +11,9 @@ numlockx &
 picom -b &
 dunst &
 xfce4-power-manager &
-$HOME/.local/bin/eww -c $HOME/.config/eww/bar --restart open bar &
 feh --no-fehbg --bg-fill --randomize $HOME/Wallpapers/
 xsetroot -cursor_name left_ptr
+$HOME/.config/polybar/launch.sh
 
 ### general config
 bspc monitor -d 1 2 3 4 5 6
@@ -66,7 +66,7 @@ for i in "${setup[@]}"; do
 done
 
 # floating apps
-declare -a floats=(Org.gnome.Nautilus feh Gedit kitty:ranger Pavucontrol
+declare -a floats=(org.gnome.Nautilus feh gnome-text-editor kitty:ranger Pavucontrol
 Virt-manager "VirtualBox Manager" "VirtualBox Machine" gnome-calculator
 Gnome-disks Arandr Gnome-system-monitor Lxappearance Xfce4-power-manager-settings 
 kitty:nmtui)
