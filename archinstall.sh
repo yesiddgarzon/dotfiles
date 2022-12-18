@@ -3,12 +3,9 @@
 packages=(
 arc-gtk-theme
 bat
-betterlockscreen
 bridge-utils
-bspwm
+code
 dnsmasq
-dunst
-feh
 firefox
 github-cli
 google-chrome
@@ -16,28 +13,18 @@ jq
 kitty
 libguestfs
 libreoffice-fresh
-lxappearance
 neovim
 nerd-fonts-jetbrains-mono
 nerd-fonts-roboto-mono
 nerd-fonts-sf-mono
 noto-fonts
 ntfs-3g
-numlockx
 openbsd-netcat
-papirus-icon-theme
-pavucontrol
-picom
-playerctl
-python-pillow
 qemu
 qemu-guest-agent
-ranger
-rofi
 spice-vdagent
 spotify
 sublime-text-4
-sxhkd
 ttf-dejavu
 ttf-iosevka-nerd
 ttf-roboto
@@ -50,8 +37,6 @@ virt-manager
 virt-viewer
 vlc
 xclip
-xfce4-power-manager
-xorg-xsetroot
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
@@ -85,18 +70,8 @@ sudo virsh net-autostart default
 sudo systemctl restart libvirtd.service
 clear
 
-# Bspwm
-install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/bspwmrc
-install -Dm644 /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/sxhkdrc
-
-# NVM + NvChad
+# # NVM + NvChad
 read -n 1 -r -s -p $'Ahora instala NvChad y NVM\nPresiona enter al terminar...\n'
-
-# Fix Cursores
-sudo sed -i 's/^Inherits\s*=\s*\(.*\)/Inherits=Vimix-cursors #\1/ #\2g' /usr/share/icons/default/index.theme
-sudo su <<END
-echo "gtk-cursor-theme-name = Vimix-cursors" > /usr/share/gtk-3.0/settings.ini
-END
 
 # Activar servicios
 clear
@@ -106,8 +81,11 @@ sudo systemctl enable sshd
 # Instalar temas e iconos
 cd ~/Downloads
 git clone https://github.com/vinceliuice/Colloid-icon-theme.git
-cd
-~/Downloads/Colloid-icon-theme/./install.sh
+git clone https://github.com/vinceliuice/Colloid-gtk-theme.git
+cd ~/Downloads/Colloid-icon-theme/
+./install.sh
+cd ~/Downloads/Colloid-gtk-theme
+./install.sh
 
 # Cargar dotfiles
 clear
