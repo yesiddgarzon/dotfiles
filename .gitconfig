@@ -1,0 +1,9 @@
+[user]
+	name = yesiddgarzon
+	email = yesiddgarzon@gmail.com
+[color]
+	ui = true
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
