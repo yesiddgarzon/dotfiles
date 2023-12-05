@@ -51,7 +51,7 @@ alias mkdir='mkdir -p'
 # Plugins
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
