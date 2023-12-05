@@ -1,14 +1,19 @@
 # General
+_Store
 .DS_Store
 .AppleDouble
 .LSOverride
+Desktop.ini
+.sass-cache
+/node_modules
 
 # Icon must end with two \r
 Icon
 
-
 # Thumbnails
 ._*
+ehthumbs.db
+Thumbs.db
 
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
@@ -26,6 +31,3 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-### macOS Patch ###
-# iCloud generated files
-*.icloud

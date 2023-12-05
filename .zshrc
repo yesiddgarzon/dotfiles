@@ -1,4 +1,6 @@
-# Enable Powerlevel10k instant prompt
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -18,49 +20,38 @@ zstyle :compinstall filename '/home/yesid/.zshrc'
 autoload -Uz compinit
 compinit
 
-# Path
-PATH+=:$HOME/.local/bin/
-
 # Aliases
 
-# -- better ls & cat
-alias ls='ls --color --group-directories-first'
+# -- better ls
 alias ll='ls -lh'
 alias la='ls -lha'
-alias cat='bat'
 
 # -- utilities
 alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 alias c='clear'
 alias sudo='sudo '
 alias reset='source ~/.zshrc && clear'
-alias vim='nvim'
-alias vi='nvim'
-alias update='yay'
-alias clean='gio trash --empty && sudo pacman -Scc && yay -Scc && sudo pacman -Rns $(pacman -Qtdq) && sudo du -sh ~/.cache/'
-alias mirrorup='sudo reflector --latest 10 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g'
+
+# -- folder shotcuts
+alias dl='cd ~/Downloads'
+alias sites='cd ~/Sites'
 
 # -- dotfiles
-alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias dota='dots add'
-alias dotc='dots commit -m'
-alias dotp='dots push'
-alias dotss='dots status'
-alias dotaa='dots commit -a'
+alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotss='dot status'
 
 # -- file management
 alias cp='cp -r'
 alias rm='rm -rf'
 alias mkdir='mkdir -p'
 
-# -- install utilities
-alias pinstall='sudo pacman -Sy --needed'
-alias yinstall='yay -Sy --needed'
-
 # Plugins
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # NVM
 export NVM_DIR="$HOME/.nvm"

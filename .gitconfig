@@ -4,6 +4,11 @@
 [color]
 	ui = true
 [core]
-	editor = nvim
+	editor = vim
+	excludesfile = ~/.gitignore
+	whitespace = warn
+	pager = less
+[github]
+	user = yesiddgarzon
 [init]
 	defaultBranch = main
