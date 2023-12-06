@@ -1,0 +1,59 @@
+{
+	"auto_indent": true,
+	"bold_folder_labels": true,
+	"caret_style": "phase",
+	"close_window_when_empty": true,
+	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
+	"detect_indentation": true,
+	"draw_minimap_border": true,
+	"draw_white_space": "selection",
+	"ensure_newline_at_eof_on_save": true,
+	"fade_fold_buttons": true,
+	"file_exclude_patterns":
+	[
+		".DS_Store"
+	],
+	"find_selected_text": true,
+	"folder_exclude_patterns":
+	[
+		".sass-cache",
+		".Trash",
+		".Trash-*",
+		"git",
+		"node_modules"
+	],
+	"font_face": "SFMono Nerd Font",
+	"font_size": 14,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"rulers":
+	[
+		80
+	],
+	"scroll_past_end": true,
+	"show_encoding": true,
+	"show_full_path": true,
+	"spacegray_fileicons": true,
+	"spacegray_sidebar_font_large": true,
+	"spell_check": true,
+	"tab_size": 2,
+	"theme": "Spacegray.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": false,
+	"use_simple_full_screen": false,
+	"use_tab_stops": true,
+	"word_wrap": true,
+	"wrap_width": 80,
+	"index_files": true,
+}
