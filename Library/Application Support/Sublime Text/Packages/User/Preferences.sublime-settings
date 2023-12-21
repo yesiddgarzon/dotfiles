@@ -46,7 +46,7 @@
 	"show_full_path": true,
 	"spacegray_fileicons": true,
 	"spacegray_sidebar_font_large": true,
-	"spell_check": true,
+	"spell_check": false,
 	"tab_size": 2,
 	"theme": "Spacegray.sublime-theme",
 	"translate_tabs_to_spaces": true,

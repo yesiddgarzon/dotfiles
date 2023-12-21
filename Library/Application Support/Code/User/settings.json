@@ -26,11 +26,13 @@
     "**/.hg": true,
     "**/.next": true,
     "**/.svn": true,
-    "**/CVS": true
+    "**/CVS": true,
     "**/node_modules": true
   },
   "files.insertFinalNewline": true,
   "window.closeWhenEmpty": true,
   "workbench.colorTheme": "Spacegray Ocean Dark",
   "workbench.iconTheme": "material-icon-theme",
+  "editor.accessibilitySupport": "off",
+  "editor.minimap.enabled": false
 }
