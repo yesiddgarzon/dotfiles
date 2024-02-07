@@ -33,7 +33,7 @@ alias ....='cd ../../..'
 alias c='clear'
 alias sudo='sudo '
 alias reset='source ~/.zshrc && clear'
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g'
+alias sysupdate='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g'
 
 # -- folder shotcuts
 alias dl='cd ~/Downloads'
@@ -42,6 +42,7 @@ alias sites='cd ~/Sites'
 # -- dotfiles
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dotss='dot status'
+alias dotadd='dot commit -ma'
 
 # -- file management
 alias cp='cp -r'
