@@ -42,7 +42,7 @@ alias sites='cd ~/Sites'
 # -- dotfiles
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dotss='dot status'
-alias dotadd='dot commit -ma'
+alias dotadd='dot commit -a -m'
 
 # -- file management
 alias cp='cp -r'
