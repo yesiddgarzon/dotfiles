@@ -37,7 +37,8 @@ alias sysupdate='sudo softwareupdate -i -a; brew update; brew upgrade; brew clea
 
 # -- folder shotcuts
 alias dl='cd ~/Downloads'
-alias sites='cd ~/Sites'
+alias docs='cd ~/Documents'
+alias cod='cd ~/code'
 
 # -- dotfiles
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
