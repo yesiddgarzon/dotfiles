@@ -59,6 +59,7 @@ alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dss='dot status'
 alias dca='dot commit -a -m'
 alias da='dot add'
+alias dp='dot push'
 
 # -- file management
 alias cp='cp -r'
