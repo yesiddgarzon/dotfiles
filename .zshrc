@@ -22,7 +22,13 @@ compinit
 
 # Aliases
 
+# -- better apps
+alias vim='nvim'
+alias cat='bat'
+# alias ls='exa'
+
 # -- better ls
+alias ls='ls --color=auto'
 alias ll='ls -lh'
 alias la='ls -lha'
 
@@ -38,17 +44,31 @@ alias sysupdate='sudo softwareupdate -i -a; brew update; brew upgrade; brew clea
 # -- folder shotcuts
 alias dl='cd ~/Downloads'
 alias docs='cd ~/Documents'
-alias cod='cd ~/code'
+alias codef='cd ~/code'
+
+# -- git
+alias ga='git add'
+alias gaa='git add --all'
+alias gc='git commit -m'
+alias gca='git commit -a -m'
+alias gss='git status'
+alias gp='git push'
 
 # -- dotfiles
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias dotss='dot status'
-alias dotadd='dot commit -a -m'
+alias dss='dot status'
+alias dca='dot commit -a -m'
+alias da='dot add'
 
 # -- file management
 alias cp='cp -r'
 alias rm='rm -rf'
 alias mkdir='mkdir -p'
+
+# -- config files
+alias czsh='vim ~/.zshrc'
+alias cvim='vim ~/.config/nvim/lua/custom/'
+alias cgit='vim ~/.gitconfig'
 
 # Plugins
 source ~/powerlevel10k/powerlevel10k.zsh-theme
