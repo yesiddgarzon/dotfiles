@@ -135,19 +135,20 @@ alias docs='cd ~/Documents'
 alias dev='cd ~/dev'
 
 # -- git
-alias ga='git add'
+alias gadd='git add'
 alias gaa='git add --all'
-alias gc='git commit -m'
+alias gcm='git commit -m'
 alias gca='git commit -a -m'
 alias gss='git status'
 alias gp='git push'
 
 # -- dotfiles
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias dss='dot status'
-alias dca='dot commit -a -m'
-alias da='dot add'
-alias dp='dot push'
+alias dotss='dot status'
+alias dotcm='dot commit -m'
+alias dotca='dot commit -a -m'
+alias dotadd='dot add'
+alias dotp='dot push'
 
 # -- file management
 alias cp='cp -r'
@@ -156,7 +157,7 @@ alias mkdir='mkdir -p'
 
 # -- config files
 alias czsh='vim ~/.zshrc'
-alias cvim='vim ~/.config/nvim/lua/custom/'
+alias cvim='vim ~/.config/nvim/lua/'
 alias cgit='vim ~/.gitconfig'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
