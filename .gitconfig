@@ -1,0 +1,14 @@
+[user]
+	name = yesiddgarzon
+	email = yesiddgarzon@gmail.com
+[color]
+	ui = true
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+	whitespace = warn
+	pager = less
+[github]
+	user = yesiddgarzon
+[init]
+	defaultBranch = main
