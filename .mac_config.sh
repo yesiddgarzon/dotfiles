@@ -21,7 +21,7 @@ clear
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew update
-brew upgradet
+brew upgrade
 
 # Install necesary apps
 brew install —cask google-chrome iterm2 rectangle vlc figma imageoptim vmware-fusion google-drive
