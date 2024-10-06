@@ -24,7 +24,7 @@ brew update
 brew upgrade
 
 # Install necesary apps
-brew install —cask google-chrome iterm2 rectangle vlc figma imageoptim vmware-fusion google-drive
+brew install —cask google-chrome iterm2 rectangle vlc figma imageoptim google-drive vmware-fusion  transmission
 
 brew install wget git nvm neovim gh bat
 
