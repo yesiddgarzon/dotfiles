@@ -121,9 +121,6 @@ alias ll='ls -lh'
 alias la='ls -lha'
 
 # -- utilities
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
 alias c='clear'
 alias sudo='sudo '
 alias reset='source ~/.zshrc && clear'
@@ -154,11 +151,6 @@ alias dotp='dot push'
 alias cp='cp -r'
 alias rm='rm -rf'
 alias mkdir='mkdir -p'
-
-# -- config files
-alias czsh='vim ~/.zshrc'
-alias cvim='vim ~/.config/nvim/lua/'
-alias cgit='vim ~/.gitconfig'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
