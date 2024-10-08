@@ -18,6 +18,9 @@ killall Finder;
 #### Install all necesary apps ####
 clear
 
+# Install Xcode and Command Line tools
+xcode-select --install && sudo xcodebuild -license
+
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew update
