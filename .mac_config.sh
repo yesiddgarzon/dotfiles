@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-#### Change some system settings ####
+#### Change system settings ####
 
 # Take screenshots as jpg (usually smaller size) and not png
 defaults write com.apple.screencapture type jpg
@@ -26,17 +26,18 @@ xcode-select --install && sudo xcodebuild -license
 brew update
 brew upgrade
 
-# Install necesary apps
-brew install —cask google-chrome iterm2 rectangle vlc figma imageoptim google-drive vmware-fusion  transmission
+# Install necessary apps
+brew install —cask google-chrome iterm2 rectangle vlc figma imageoptim google-drive vmware-fusion transmission
 
 brew install wget git nvm neovim gh bat
 
-# Install Oh My Zsh
+# Install Oh-My-Zsh
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 # Install Oh-My-Zsh plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 #### Configurations ####
 clear
