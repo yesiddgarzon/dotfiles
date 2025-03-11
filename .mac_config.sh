@@ -18,18 +18,23 @@ killall Finder;
 #### Install all necesary apps ####
 clear
 
-# Install Xcode and Command Line tools
-xcode-select --install && sudo xcodebuild -license
-
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew update
 brew upgrade
 
-# Install necessary apps
-brew install —cask google-chrome iterm2 rectangle vlc figma imageoptim google-drive vmware-fusion transmission
+# Install Xcode and Command Line tools
+xcode-select --install && sudo xcodebuild -license
 
-brew install wget git nvm neovim gh bat
+# Install all apps
+brew install --cask google-chrome iterm2 rectangle vlc figma imageoptim google-drive vmware-fusion transmission discord visual-studio-code sublime-text 
+
+brew install wget git neovim gh bat ffmpeg imagemagick
+
+brew tap homebrew/cask-versions
+brew install homebrew/cask-versions/firefox-developer-edition
+
+nvm install
 
 # Install Oh-My-Zsh
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
