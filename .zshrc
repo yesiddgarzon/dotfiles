@@ -111,7 +111,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # -- better apps
-alias vim='nvim'
 alias cat='bat'
 # alias ls='exa'
 

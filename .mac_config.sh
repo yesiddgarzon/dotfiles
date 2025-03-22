@@ -20,6 +20,8 @@ clear
 
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+read -p "Do homebrew config and press enter"
+
 brew update
 brew upgrade
 
@@ -27,14 +29,15 @@ brew upgrade
 xcode-select --install && sudo xcodebuild -license
 
 # Install all apps
-brew install --cask google-chrome iterm2 rectangle vlc figma imageoptim google-drive vmware-fusion transmission discord visual-studio-code sublime-text 
-
-brew install wget git neovim gh bat ffmpeg imagemagick
-
 brew tap homebrew/cask-versions
 brew install homebrew/cask-versions/firefox-developer-edition
 
-nvm install
+brew install --cask google-chrome iterm2 rectangle vlc figma imageoptim vmware-fusion transmission visual-studio-code audacity google-drive
+
+brew install wget git gh bat ffmpeg imagemagick
+
+# Install NvChad
+git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
 
 # Install Oh-My-Zsh
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
