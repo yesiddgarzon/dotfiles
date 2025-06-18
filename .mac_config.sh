@@ -39,6 +39,9 @@ brew install wget git gh bat ffmpeg imagemagick alt-tab
 # Install NvChad
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
 
+# Install NVM
+read -p "Install NVM and press enter"
+
 # Install Oh-My-Zsh
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
