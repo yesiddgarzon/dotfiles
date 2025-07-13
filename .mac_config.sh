@@ -32,7 +32,7 @@ xcode-select --install && sudo xcodebuild -license
 brew tap homebrew/cask-versions
 brew install homebrew/cask-versions/firefox-developer-edition
 
-brew install --cask google-chrome iterm2 rectangle vlc figma imageoptim vmware-fusion transmission visual-studio-code audacity
+brew install --cask google-chrome iterm2 rectangle vlc figma imageoptim vmware-fusion transmission visual-studio-code audacity google-drive
 
 brew install wget git gh bat ffmpeg imagemagick alt-tab
 
