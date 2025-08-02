@@ -34,7 +34,7 @@ brew install homebrew/cask-versions/firefox-developer-edition
 
 brew install --cask google-chrome iterm2 rectangle vlc figma imageoptim vmware-fusion transmission visual-studio-code audacity google-drive
 
-brew install wget git gh bat ffmpeg imagemagick alt-tab
+brew install wget git gh bat ffmpeg imagemagick alt-tab jq watch
 
 # Install NvChad
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
