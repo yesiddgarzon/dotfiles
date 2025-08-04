@@ -112,10 +112,9 @@ source $ZSH/oh-my-zsh.sh
 
 # -- better apps
 alias cat='bat'
-# alias ls='exa'
+alias ls='eza'
 
 # -- better ls
-alias ls='ls --color=auto'
 alias ll='ls -lh'
 alias la='ls -lha'
 
@@ -126,7 +125,7 @@ alias reset='source ~/.zshrc && clear'
 alias sysupdate='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g'
 
 # -- folder shotcuts
-alias dl='cd ~/Downloads'
+alias dw='cd ~/Downloads'
 alias docs='cd ~/Documents'
 alias dev='cd ~/dev'
 
