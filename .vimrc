@@ -12,7 +12,8 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
 
-"" -- GENERAL CONFIGURATION --
+"" -- General Configuration
+"" -------------------------------------
 let mapleader=" "
 set nocompatible
 set encoding=utf-8
@@ -35,7 +36,6 @@ set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 set shiftround
-"set nowrap
 set spell
 
 " Visual
@@ -45,7 +45,7 @@ set showcmd
 set modeline
 set ruler
 set title
-set relativenumber
+" set relativenumber
 set number
 set textwidth=80
 set colorcolumn=+1
@@ -58,7 +58,8 @@ set incsearch
 set ignorecase
 set smartcase
 
-"" -- PLUGINS LOADER --
+"" -- Plugin Manager
+"" -------------------------------------
 call plug#begin('~/.vim/plugged')
 
 " syntax
@@ -66,8 +67,7 @@ Plug 'sheerun/vim-polyglot'
 
 " theme
 Plug 'itchyny/lightline.vim'
-Plug 'nordtheme/vim'
-Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
 
 " Tree
 Plug 'scrooloose/nerdtree'
@@ -78,28 +78,24 @@ Plug 'tpope/vim-surround'
 
 call plug#end()
 
-"" -- PLUGINS CONFIGURATIONS --
+"" -- Plugins Configurations
+"" -------------------------------------
 
-" colorscheme
-colorscheme gruvbox
-
-set background=dark
-
-
-let g:nord_italic = 1
-let g:nord_italic_comments = 1
+" Theming
+let g:onedark_terminal_italics = 1
+colorscheme onedark
 
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'onedark',
       \ }
 
-" NERDTree
+" NERD Tree 
 nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
-"" -- Keymaps
+"" -- Keybindings 
+"" -------------------------------------
 
 " scrolling
 nnoremap <C-j> 5j
