@@ -15,7 +15,7 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 killall Finder;
 
-#### Install all necesary apps ####
+#### Install all required apps ####
 clear
 
 # Install Homebrew

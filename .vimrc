@@ -45,7 +45,6 @@ set showcmd
 set modeline
 set ruler
 set title
-" set relativenumber
 set number
 set textwidth=80
 set colorcolumn=+1
