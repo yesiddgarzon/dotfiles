@@ -34,7 +34,7 @@ brew install homebrew/cask-versions/firefox-developer-edition
 
 brew install --cask google-chrome iterm2 rectangle vlc figma imageoptim transmission audacity google-drive postman
 
-brew install wget git gh bat ffmpeg imagemagick alt-tab jq watch eza 
+brew install wget git gh bat ffmpeg imagemagick jq watch eza 
 
 # Install NVM
 read -p "Install NVM and press enter"
