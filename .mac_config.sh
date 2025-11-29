@@ -32,7 +32,7 @@ xcode-select --install && sudo xcodebuild -license
 brew tap homebrew/cask-versions
 brew install homebrew/cask-versions/firefox-developer-edition
 
-brew install --cask google-chrome iterm2 rectangle vlc figma imageoptim transmission audacity google-drive postman font-jetbrains-mono-nerd-font
+brew install --cask google-chrome iterm2 rectangle vlc figma imageoptim transmission audacity google-drive font-jetbrains-mono-nerd-font
 
 brew install wget git gh bat ffmpeg imagemagick jq watch eza 
 
